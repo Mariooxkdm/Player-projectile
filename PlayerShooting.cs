@@ -11,7 +11,7 @@ public class PlayerShooting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
        
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
 
     }
