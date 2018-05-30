@@ -10,12 +10,9 @@ public class PlayerShooting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+       
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector3 direction = new Vector3(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-        transform.up = direction;
-        target = new Vector2(mousePosition.x, mousePosition.y);
 
     }
 
