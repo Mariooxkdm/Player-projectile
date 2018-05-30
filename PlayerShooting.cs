@@ -20,9 +20,9 @@ public class PlayerShooting : MonoBehaviour {
    
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position , target)<0f)
+        if (Vector2.Distance(transform.position , target)<0f)
         {
             DestroyProjectile();
             Instantiate(effect, transform.position, Quaternion.identity);
